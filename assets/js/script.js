@@ -18,6 +18,10 @@ const PROJECTS = [
       overview: "NeuroWeave dikembangkan sebagai solusi cerdas untuk mengatasi fenomena *information overload* pada manajemen pengetahuan personal. Penelitian ini mengintegrasikan teknologi *Natural Language Processing* (NLP) dengan representasi data berbasis graf untuk menciptakan ekosistem pengetahuan yang mampu memahami konteks dan keterkaitan antar ide secara otonom.",
       sections: [
         {
+          title: "Platform & Domain",
+          content: "**Platform:** Aplikasi Web berbasis browser (Web App) — dapat diakses dari perangkat apa pun tanpa instalasi.\n\n**Domain:** Produktivitas Personal & Manajemen Pengetahuan (*Personal Knowledge Management / PKM*). Ditujukan untuk peneliti, mahasiswa, dan profesional yang bekerja dengan volume informasi tinggi.\n\n**Berbasis:** Kecerdasan Buatan (AI) dengan pendekatan **Semantic Graph** — informasi direpresentasikan sebagai jaringan node yang saling terhubung berdasarkan makna, bukan sekadar folder atau tag.\n\n**Metode:**\n\n- **Graph-Based Knowledge Representation** — memodelkan pengetahuan sebagai graf semantik non-linear.\n- **Sentence Transformers** — mengonversi teks menjadi vektor makna (embeddings) untuk pemahaman konteks.\n- **NER (Named Entity Recognition)** — ekstraksi otomatis entitas penting dari teks.\n- **Topic Modeling (LDA)** — pengelompokan konsep berbasis kemiripan tematik tanpa pelabelan manual."
+        },
+        {
           title: "1. Latar Belakang & Rumusan Masalah",
           content: "Paradoks informasi modern menunjukkan bahwa peningkatan volume data seringkali berbanding terbalik dengan kemudahan akses pengetahuan. Aplikasi pencatatan konvensional umumnya terbatas pada penyimpanan linear atau berbasis folder yang statis. Masalah utamanya adalah **kurangnya pemahaman semantik** pada sistem, sehingga hubungan implisit antar informasi yang berbeda seringkali terputus.\n\nNeuroWeave menjawab tantangan ini: Bagaimana membangun sistem yang mampu melakukan manajemen pengetahuan non-linear dengan meniru cara kerja asosiatif otak manusia?"
         },
@@ -35,7 +39,7 @@ const PROJECTS = [
         },
         {
           title: "5. Rancangan Website NeuroWeave",
-          content: "Website NeuroWeave dirancang sebagai platform web interaktif berbasis AI dengan tampilan futuristik:\n\n- **Landing Page**: Hero section dengan animasi neural network, tagline utama, dan CTA untuk memulai.*\n- **Dashboard Utama**: Interface graf 3D interaktif menggunakan Three.js — pengguna bisa drag, zoom, dan klik node pengetahuan.\n- **Editor Note**: Rich-text editor bertenaga AI yang secara otomatis mengidentifikasi entitas dan membuat koneksi ke catatan lain.\n- **Search Intelligence**: Pencarian semantik dengan hasil berupa kartu koneksi, bukan sekadar list teks.\n- **Tech Stack UI**: React.js, TailwindCSS, Three.js (frontend) | FastAPI, Python, MongoDB, VectorDB (backend)."
+          content: "Website NeuroWeave dirancang sebagai **platform Web App** interaktif berbasis AI dengan tampilan futuristik:\n\n- **Landing Page**: Hero section dengan animasi neural network, tagline utama, dan CTA untuk memulai.\n- **Dashboard Utama**: Interface graf 3D interaktif menggunakan Three.js — pengguna bisa drag, zoom, dan klik node pengetahuan.\n- **Editor Note**: Rich-text editor bertenaga AI yang secara otomatis mengidentifikasi entitas dan membuat koneksi ke catatan lain.\n- **Search Intelligence**: Pencarian semantik dengan hasil berupa kartu koneksi, bukan sekadar list teks.\n- **Tech Stack Frontend**: React.js, TailwindCSS, Three.js.\n- **Tech Stack Backend**: FastAPI (Python), MongoDB, Vector Database (pgvector/Qdrant)."
         }
       ],
       resources: [
@@ -58,6 +62,10 @@ const PROJECTS = [
       overview: "BizPilot merupakan proyek penelitian yang mengeksplorasi potensi **Autonomous AI Agents** dalam mendukung keberlanjutan sektor UMKM. Melalui implementasi sistem cerdas yang mampu melakukan analisis prediktif dan automasi operasional, BizPilot bertujuan untuk mengurangi dependensi pelaku bisnis mikro terhadap tim ahli manusia yang mahal.",
       sections: [
         {
+          title: "Platform & Domain",
+          content: "**Platform:** Aplikasi Web berbasis SaaS (*Software as a Service*) — diakses via browser, tanpa instalasi, berbasis subscription.\n\n**Domain:** Kewirausahaan Mikro & UMKM (*Micro Business / SME Automation*). Ditujukan untuk pemilik usaha kecil, pedagang, dan pelaku UMKM yang tidak memiliki tim analis bisnis.\n\n**Berbasis:** Kecerdasan Buatan (AI) dengan pendekatan **Multi-Agent System** — setiap fungsi bisnis dijalankan oleh agen AI yang bekerja secara otonom dan terspesialisasi, layaknya sebuah tim konsultan digital.\n\n**Metode:**\n\n- **LSTM (Long Short-Term Memory)** — prediksi tren penjualan dan kebutuhan stok berdasarkan data historis.\n- **Multi-Agent AI Architecture** — agen terpisah untuk forecasting, keuangan, dan rekomendasi.\n- **Reinforcement Learning (Contextual Bandits)** — sistem belajar dan beradaptasi dari keputusan nyata pemilik bisnis.\n- **RabbitMQ Message Queue** — sinkronisasi data real-time antar agen tanpa jeda."
+        },
+        {
           title: "1. Identifikasi Masalah",
           content: "Sektor bisnis mikro seringkali gagal naik kelas karena keterbatasan akses terhadap analisis pasar yang akurat dan pengelolaan stok yang tidak efisien. Pengambilan keputusan yang hanya mengandalkan intuisi pemilik tanpa dukungan data empiris sering menyebabkan *deadstock* dan ketidakstabilan arus kas (cash flow).\n\nRumusan masalah yang diangkat: Sejauh mana sistem AI otonom dapat menggantikan fungsi konsultan bisnis tradisional dalam mengelola strategi operasional harian bisnis mikro?"
         },
@@ -75,7 +83,7 @@ const PROJECTS = [
         },
         {
           title: "5. Rancangan Website BizPilot",
-          content: "Website BizPilot dirancang sebagai SaaS dashboard yang clean dan data-centric:\n\n- **Landing Page**: Hero dengan animasi grafik real-time bergerak, value proposition singkat, dan tombol 'Mulai Gratis'.\n- **Dashboard Bisnis**: Overview KPI harian (Pendapatan, Stok, Prediksi) dalam card metrics dengan grafik line/bar interaktif.\n- **AI Advisor Panel**: Chat-interface dengan AI yang memberi rekomendasi bisnis harian berdasarkan data terkini.\n- **Laporan Otomatis**: Halaman report yang auto-generate PDF ringkasan mingguan.\n- **Tech Stack UI**: React.js, Chart.js, TailwindCSS (frontend) | Node.js, Python LSTM, MongoDB, Docker (backend)."
+          content: "Website BizPilot dirancang sebagai **platform SaaS Web App** yang clean dan data-centric:\n\n- **Landing Page**: Hero dengan animasi grafik real-time bergerak, value proposition singkat, dan tombol 'Mulai Gratis'.\n- **Dashboard Bisnis**: Overview KPI harian (Pendapatan, Stok, Prediksi) dalam card metrics dengan grafik line/bar interaktif (Chart.js).\n- **AI Advisor Panel**: Chat-interface dengan AI yang memberi rekomendasi bisnis harian berdasarkan data terkini.\n- **Laporan Otomatis**: Halaman report yang auto-generate PDF ringkasan mingguan.\n- **Tech Stack Frontend**: React.js, Chart.js, TailwindCSS.\n- **Tech Stack Backend**: Node.js, Python (LSTM), MongoDB, Docker, RabbitMQ."
         }
       ],
       resources: [
@@ -98,6 +106,10 @@ const PROJECTS = [
       overview: "ThesisMiner dirancang sebagai alat bantu akademik transformatif yang memanfaatkan kecerdasan buatan untuk mempercepat proses **Penemuan Celah Penelitian** (*Research Gap Discovery*). Fokus utama penelitian ini adalah mengintegrasikan teknik pengambilan data otomatis dengan analisis semantik tingkat lanjut untuk memberikan navigasi strategis bagi peneliti muda dalam menentukan arah riset mereka.",
       sections: [
         {
+          title: "Platform & Domain",
+          content: "**Platform:** Aplikasi Web berbasis browser (Web App) + sistem scraping otomatis di backend — dapat diakses langsung dari browser tanpa instalasi.\n\n**Domain:** Teknologi Pendidikan (*EdTech*) & Riset Akademik. Ditujukan untuk mahasiswa tingkat akhir (S1/S2/S3), dosen pembimbing, dan peneliti yang kesulitan menemukan gap penelitian yang belum dieksplorasi.\n\n**Berbasis:** Kecerdasan Buatan (AI) dengan pendekatan **NLP & Topic Modeling** — sistem secara otomatis memetakan lanskap riset dari ribuan jurnal dan mengidentifikasi 'ruang kosong' yang berpotensi menjadi topik baru.\n\n**Metode:**\n\n- **BERTopic + Sentence-BERT (Transformers)** — representasi semantik abstrak jurnal ke dalam ruang vektor berdimensi tinggi.\n- **HDBSCAN Clustering** — pengelompokan topik secara dinamis dan otomatis tanpa pelabelan manual (*Unsupervised Learning*).\n- **Scrapy Web Scraping** — ekstraksi data metadata dan abstrak secara legal dari SINTA, IEEE, dan repositori akademik lainnya.\n- **Knowledge Graph Visualization** — pemetaan visual 2D distribusi riset untuk mengidentifikasi area kosong secara intuitif."
+        },
+        {
           title: "1. Latar Belakang & Urgensi Penelitian",
           content: "Salah satu hambatan utama mahasiswa dalam tahap awal Tugas Akhir (TA) adalah sulitnya menemukan kebaruan (*novelty*) penelitian di tengah jutaan publikasi ilmiah yang sudah ada. Proses peninjauan literatur secara manual membutuhkan waktu berbulan-bulan dan sangat rentan terhadap residu informasi yang tidak relevan.\n\nPenelitian ini mengusulkan solusi: Sistem otomasi pencarian gap riset yang mampu memproses ribuan abstrak jurnal dalam hitungan menit untuk mengidentifikasi topik yang belum dieksplorasi namun memiliki potensi signifikansi tinggi."
         },
@@ -115,7 +127,7 @@ const PROJECTS = [
         },
         {
           title: "5. Rancangan Website ThesisMiner",
-          content: "Website ThesisMiner dirancang sebagai platform riset berbasis AI yang ramah mahasiswa:\n\n- **Landing Page**: Hero dengan ilustrasi peta topik dinamis, klaim utama 'Temukan Celah Riset dalam 60 Detik', dan tombol 'Coba Gratis'.\n- **Topic Explorer**: Halaman utama dengan input pencarian jurnal → sistem menampilkan bubble chart interaktif dari klaster topik.\n- **Gap Detector**: Panel hasil yang menampilkan area kosong (research gap) dengan confidence score dan rekomendasi judul TA.\n- **History & Saved**: Pengguna bisa simpan sesi pencarian dan ekspor hasil ke PDF/Word.\n- **Tech Stack UI**: React.js, D3.js (visualisasi) | Python, BERTopic, Scrapy, FastAPI (backend)."
+          content: "Website ThesisMiner dirancang sebagai **platform EdTech Web App** berbasis AI yang ramah mahasiswa:\n\n- **Landing Page**: Hero dengan ilustrasi peta topik dinamis, klaim utama 'Temukan Celah Riset dalam 60 Detik', dan tombol 'Coba Gratis'.\n- **Topic Explorer**: Input pencarian jurnal → sistem menampilkan bubble chart interaktif dari klaster topik yang dipetakan oleh BERTopic.\n- **Gap Detector**: Panel hasil yang menampilkan area kosong (research gap) dengan confidence score dan rekomendasi judul TA.\n- **History & Saved**: Pengguna bisa simpan sesi pencarian dan ekspor hasil ke PDF/Word.\n- **Tech Stack Frontend**: React.js, D3.js (visualisasi bubble chart & knowledge graph).\n- **Tech Stack Backend**: Python, BERTopic, Sentence-BERT, Scrapy, FastAPI."
         }
       ],
       resources: [
