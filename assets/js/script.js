@@ -1,4 +1,5 @@
 /* ===== SCRIPT.JS - UZI Portfolio ===== */
+console.log("Script v2.1 loaded (ThesisMiner Update)");
 
 /* ---- Project Data ---- */
 const PROJECTS = [
@@ -9,33 +10,36 @@ const PROJECTS = [
     category: "AI / Web App",
     year: "2024",
     filename: "NeuroWeave_TA.docx",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200",
+    image: "assets/img/project-neuroweave.png",
     tools: ["Python", "NLP", "React", "FastAPI", "MongoDB"],
     accentColor: "#60a5fa",
     desc: "Sistem navigasi pengetahuan personal berbasis AI yang membantu pengguna mengelola dan menghubungkan informasi secara cerdas.",
     caseStudy: {
-      overview: "NeuroWeave lahir dari frustrasi nyata: semakin banyak informasi yang dikumpulkan, semakin sulit untuk menemukan dan menghubungkan pengetahuan yang relevan. Proyek ini menggabungkan teknologi Natural Language Processing mutakhir dengan desain yang berpusat pada pengguna untuk menciptakan \"otak digital\" pribadi.",
+      overview: "NeuroWeave dikembangkan sebagai solusi cerdas untuk mengatasi fenomena *information overload* pada manajemen pengetahuan personal. Penelitian ini mengintegrasikan teknologi *Natural Language Processing* (NLP) dengan representasi data berbasis graf untuk menciptakan ekosistem pengetahuan yang mampu memahami konteks dan keterkaitan antar ide secara otonom.",
       sections: [
         {
-          title: "Tantangan & Latar Belakang",
-          content: "Dalam era informasi ini, kita dihadapkan pada paradoks yang ironis: semakin banyak data yang tersedia, semakin sulit menemukan apa yang kita butuhkan. Google Keep, Notion, dan Obsidian fantastis—namun mereka hanya menyimpan teks. Mereka tidak *memahami* konteks atau hubungan antar ide.\n\nNeuroWeave dirancang untuk menjawab: bagaimana jika sistem manajemen pengetahuan bisa berpikir seperti otak manusia—menghubungkan konsep yang tampaknya tidak berkaitan?"
+          title: "1. Latar Belakang & Rumusan Masalah",
+          content: "Paradoks informasi modern menunjukkan bahwa peningkatan volume data seringkali berbanding terbalik dengan kemudahan akses pengetahuan. Aplikasi pencatatan konvensional umumnya terbatas pada penyimpanan linear atau berbasis folder yang statis. Masalah utamanya adalah **kurangnya pemahaman semantik** pada sistem, sehingga hubungan implisit antar informasi yang berbeda seringkali terputus.\n\nNeuroWeave menjawab tantangan ini: Bagaimana membangun sistem yang mampu melakukan manajemen pengetahuan non-linear dengan meniru cara kerja asosiatif otak manusia?"
         },
         {
-          title: "Pendekatan Teknis",
-          content: "Inti dari NeuroWeave adalah **Graph-Based Knowledge Representation**. Setiap catatan, dokumen, atau ide dimodelkan sebagai *node* dalam knowledge graph. Relasi semantik antar node dibangun secara otomatis menggunakan:\n\n- **Sentence Transformers** untuk embedding teks dense\n- **Named Entity Recognition (NER)** untuk ekstraksi entitas kunci\n- **Topic Modeling (LDA)** untuk clustering konsep tematik\n- **FastAPI** sebagai backbone REST API dengan response time < 240ms\n\nFrontend dibangun dengan React, menampilkan visualisasi graph 3D interaktif menggunakan Three.js."
+          title: "2. Metodologi Penelitian",
+          content: "Penelitian ini menggunakan pendekatan **Graph-Based Knowledge Representation**. Metodologi inti mencakup:\n\n- **Semantic Extraction**: Menggunakan *Sentence Transformers* untuk mengonversi teks mentah menjadi vektor padat (embeddings).\n- **Automated Entity Relationship**: Algoritma NER (*Named Entity Recognition*) digunakan untuk mengekstraksi entitas kunci yang kemudian dimodelkan sebagai *nodes*.\n- **Unsupervised Learning**: Penerapan algoritma *Topic Modeling* (LDA) untuk mengelompokkan konsep-konsep berdasarkan kemiripan tematik secara otomatis tanpa intervensi manual."
         },
         {
-          title: "Implementasi & Pembelajaran",
-          content: "Tantangan terbesar adalah merancang sistem retrieval yang terasa *natural*. Pendekatan tradisional keyword search terlalu kaku—pengguna harus tahu persis kata yang dipakai. Solusinya: **Hybrid Retrieval** yang menggabungkan sparse search (BM25) dan dense search (vector similarity).\n\nHasil: sistem mampu menjawab query seperti 'ide yang berhubungan dengan proyek kuliah kemarin' dengan akurasi 94%, bahkan ketika catatan tidak mengandung kata kunci tersebut secara eksplisit."
+          title: "3. Implementasi Sistem (Web App)",
+          content: "Arsitektur aplikasi dibangun dengan fokus pada performa dan skalabilitas:\n\n- **Backend**: *FastAPI* dipilih karena kemampuannya menangani operasi asinkron dengan latensi rendah (< 240ms).\n- **Database**: Kombinasi *MongoDB* untuk penyimpanan dokumen dan *Vector Database* untuk pencarian semantik.\n- **Frontend**: *React.js* yang diintegrasikan dengan *Three.js* untuk menghasilkan visualisasi graf 3D interaktif yang memungkinkan pengguna melakukan eksplorasi pengetahuan secara spasial."
         },
         {
-          title: "Hasil & Dampak",
-          content: "NeuroWeave berhasil memproses lebih dari 10.000 dokumen dalam pengujian, dengan:\n\n- Waktu respons rata-rata **240ms** per query semantik\n- Akurasi retrieval **94%** berdasarkan human evaluation\n- Pengurangan waktu pencarian informasi hingga **67%** dalam uji pengguna\n\nProyek ini membawa pemahaman mendalam tentang trade-off antara akurasi model dan latensi sistem—pelajaran yang sangat berharga untuk karier di bidang AI Engineering."
+          title: "4. Evaluasi & Kontribusi",
+          content: "Hasil pengujian sistem terhadap dataset 10.000+ dokumen menunjukkan:\n\n- **Akurasi Retrieval 94%**: Melampaui metode pencarian berbasis *keyword* tradisional dalam hal pemahaman konteks.\n- **Efisiensi Navigasi**: Reduksi waktu pencarian informasi hingga **67%** pada uji coba tingkat pengguna.\n\nPenelitian ini memberikan kontribusi pada pengembangan sistem *Digital Brain* yang lebih intuitif dan adaptif terhadap kebutuhan riset maupun produktivitas profesional."
+        },
+        {
+          title: "5. Rancangan Website NeuroWeave",
+          content: "Website NeuroWeave dirancang sebagai platform web interaktif berbasis AI dengan tampilan futuristik:\n\n- **Landing Page**: Hero section dengan animasi neural network, tagline utama, dan CTA untuk memulai.*\n- **Dashboard Utama**: Interface graf 3D interaktif menggunakan Three.js — pengguna bisa drag, zoom, dan klik node pengetahuan.\n- **Editor Note**: Rich-text editor bertenaga AI yang secara otomatis mengidentifikasi entitas dan membuat koneksi ke catatan lain.\n- **Search Intelligence**: Pencarian semantik dengan hasil berupa kartu koneksi, bukan sekadar list teks.\n- **Tech Stack UI**: React.js, TailwindCSS, Three.js (frontend) | FastAPI, Python, MongoDB, VectorDB (backend)."
         }
       ],
       resources: [
-        { label: "Baca Dokumen Lengkap", url: "docs/NeuroWeave_TA.docx" },
-        { label: "Paper NLP Reference", url: "#" }
+        { label: "View on GitHub", url: "#" }
       ]
     }
   },
@@ -46,82 +50,119 @@ const PROJECTS = [
     category: "AI / Automation",
     year: "2024",
     filename: "BizPilot_TA.docx",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+    image: "assets/img/project-bizpilot.png",
     tools: ["Python", "Machine Learning", "Node.js", "MongoDB", "Docker"],
     accentColor: "#a78bfa",
     desc: "Platform AI otonom untuk bisnis mikro yang mengautomasi perencanaan, operasional, dan pengambilan keputusan bisnis.",
     caseStudy: {
-      overview: "BizPilot hadir untuk menjawab tantangan nyata bisnis mikro di Indonesia: keterbatasan sumber daya manusia dan keahlian dalam pengambilan keputusan berbasis data. Bayangkan memiliki konsultan bisnis AI yang bekerja 24/7—itulah BizPilot.",
+      overview: "BizPilot merupakan proyek penelitian yang mengeksplorasi potensi **Autonomous AI Agents** dalam mendukung keberlanjutan sektor UMKM. Melalui implementasi sistem cerdas yang mampu melakukan analisis prediktif dan automasi operasional, BizPilot bertujuan untuk mengurangi dependensi pelaku bisnis mikro terhadap tim ahli manusia yang mahal.",
       sections: [
         {
-          title: "Masalah yang Dipecahkan",
-          content: "Lebih dari 64 juta UMKM di Indonesia beroperasi hampir sepenuhnya berdasarkan intuisi pemilik. Tidak ada sistem forecasting kas, tidak ada analisis tren penjualan, tidak ada peringatan dini ketika stok mendekati habis.\n\nBizPilot dirancang untuk mengisi gap ini: sebuah copilot AI yang memahami konteks bisnis mikro dan memberikan rekomendasi yang actionable—bukan sekadar dashboard cantik."
+          title: "1. Identifikasi Masalah",
+          content: "Sektor bisnis mikro seringkali gagal naik kelas karena keterbatasan akses terhadap analisis pasar yang akurat dan pengelolaan stok yang tidak efisien. Pengambilan keputusan yang hanya mengandalkan intuisi pemilik tanpa dukungan data empiris sering menyebabkan *deadstock* dan ketidakstabilan arus kas (cash flow).\n\nRumusan masalah yang diangkat: Sejauh mana sistem AI otonom dapat menggantikan fungsi konsultan bisnis tradisional dalam mengelola strategi operasional harian bisnis mikro?"
         },
         {
-          title: "Arsitektur Sistem",
-          content: "BizPilot menggunakan arsitektur **Multi-Agent AI** di mana setiap agen spesialis menangani domain tertentu:\n\n- **Market Intelligence Agent**: memantau tren harga dan kompetitor secara real-time\n- **Cash Flow Agent**: memprediksi kebutuhan kas 30-90 hari ke depan menggunakan LSTM\n- **Inventory Agent**: menghitung optimal reorder point berdasarkan demand forecasting\n- **Decision Orchestrator**: mengintegrasikan semua sinyal menjadi rekomendasi akhir\n\nSemua agen berkomunikasi via message queue (RabbitMQ) yang containerized dengan Docker."
+          title: "2. Pendekatan Algoritmik",
+          content: "Sistem ini dibangun menggunakan arsitektur **Multi-Agent AI**. Setiap agen memiliki spesialisasi:\n\n- **Forecasting Agent**: Menggunakan model *Long Short-Term Memory* (LSTM) untuk memprediksi tren penjualan dan permintaan stok.\n- **Financial Intelligence Agent**: Melakukan optimasi alokasi dana secara otomatis berdasarkan data historis dan proyeksi pengeluaran.\n- **Adaptive Learning**: Penerapan *Reinforcement Learning* (Contextual Bandits) untuk menyesuaikan rekomendasi sistem berdasarkan umpan balik langsung dari pemilik bisnis."
         },
         {
-          title: "Reinforcement Learning untuk Adaptasi",
-          content: "Tantangan unik bisnis mikro adalah variabilitas yang tinggi—kondisi pasar lokal sangat berbeda antar daerah. Solusinya adalah **Contextual Bandits** yang terus belajar dari feedback pemilik bisnis.\n\nSetiap kali rekomendasi diikuti atau diabaikan, sistem mencatat hasilnya dan menyesuaikan model. Dalam 3 bulan pengujian, akurasi prediksi naik dari 71% ke 87%—bukti nyata pembelajaran adaptif."
+          title: "3. Pengembangan Aplikasi Web",
+          content: "Aplikasi ini dirancang sebagai platform *Enterprise-Grade* untuk skala mikro:\n\n- **Scalability**: Seluruh modul sistem dikemas dalam *Docker containers* untuk memastikan kemudahan *deployment*.\n- **Real-time Processing**: Integrasi *RabbitMQ* sebagai perantara pesan (*message queue*) antar agen AI untuk memastikan sinkronisasi data tanpa jeda.\n- **Interface**: Dashboard berbasis web yang responsif dengan visualisasi metrik bisnis yang mudah diinterpretasikan."
         },
         {
-          title: "Dampak Terukur",
-          content: "Setelah 6 bulan pengujian dengan 15 UMKM pilot:\n\n- **ROI rata-rata 3.2x** dari implementasi rekomendasi sistem\n- **85% proses operasional** berhasil diotomasi (laporan, pengingat, alert)\n- Pengurangan stok deadstock hingga **43%**\n- Net Promoter Score dari pengguna pilot: **72/100**"
+          title: "4. Hasil & Analisis Dampak",
+          content: "Uji coba selama 6 bulan pada 15 pilot UMKM menunjukkan hasil signifikan:\n\n- **Peningkatan Efisiensi**: Automasi laporan dan pengingat stok hingga **85%**.\n- **Akurasi Prediksi**: Meningkat secara gradual hingga mencapai **87%** setelah fase *fine-tuning* model.\n- **Kesehatan Finansial**: Pengurangan insiden *deadstock* sebesar **43%**, meningkatkan profitabilitas bersih secara keseluruhan."
+        },
+        {
+          title: "5. Rancangan Website BizPilot",
+          content: "Website BizPilot dirancang sebagai SaaS dashboard yang clean dan data-centric:\n\n- **Landing Page**: Hero dengan animasi grafik real-time bergerak, value proposition singkat, dan tombol 'Mulai Gratis'.\n- **Dashboard Bisnis**: Overview KPI harian (Pendapatan, Stok, Prediksi) dalam card metrics dengan grafik line/bar interaktif.\n- **AI Advisor Panel**: Chat-interface dengan AI yang memberi rekomendasi bisnis harian berdasarkan data terkini.\n- **Laporan Otomatis**: Halaman report yang auto-generate PDF ringkasan mingguan.\n- **Tech Stack UI**: React.js, Chart.js, TailwindCSS (frontend) | Node.js, Python LSTM, MongoDB, Docker (backend)."
         }
       ],
       resources: [
-        { label: "Baca Dokumen Lengkap", url: "docs/BizPilot_TA.docx" }
+        { label: "View on GitHub", url: "#" }
       ]
     }
   },
   {
     id: 3,
-    title: "Methodica",
-    subtitle: "AI Research & Experiment Designer",
-    category: "Research / AI",
+    title: "ThesisMiner",
+    subtitle: "AI Research Gap & Topic Discovery",
+    category: "AI / EdTech",
     year: "2024",
-    filename: "Methodica_TA.docx",
-    image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=1200",
-    tools: ["Python", "TensorFlow", "React", "PostgreSQL", "Jupyter"],
-    accentColor: "#4ade80",
-    desc: "Alat desain eksperimen penelitian berbasis AI yang membantu peneliti merancang dan menganalisis eksperimen ilmiah.",
+    filename: "ThesisMiner_AI_Research_Gap_Finder_TA.docx",
+    image: "assets/img/project-thesisminer.png",
+    tools: ["Python", "Transformers", "NLP", "Scrapy", "React"],
+    accentColor: "#f59e0b",
+    desc: "Platform cerdas untuk menemukan gap penelitian dan inspirasi judul skripsi secara otomatis dari ribuan jurnal ilmiah.",
     caseStudy: {
-      overview: "Methodica lahir dari observasi bahwa peneliti, terutama di tingkat S1 dan S2, sering menghabiskan minggu-minggu berharga hanya untuk merancang metodologi penelitian—padahal banyak pola yang berulang dan bisa dipelajari AI.",
+      overview: "ThesisMiner dirancang sebagai alat bantu akademik transformatif yang memanfaatkan kecerdasan buatan untuk mempercepat proses **Penemuan Celah Penelitian** (*Research Gap Discovery*). Fokus utama penelitian ini adalah mengintegrasikan teknik pengambilan data otomatis dengan analisis semantik tingkat lanjut untuk memberikan navigasi strategis bagi peneliti muda dalam menentukan arah riset mereka.",
       sections: [
         {
-          title: "Konteks & Motivasi",
-          content: "Penelitian ilmiah yang baik dimulai dari metodologi yang solid. Namun bagi banyak peneliti muda, merancang eksperimen yang bebas bias adalah tantangan tersendiri. Konfounding variabel, selection bias, inadequate sample size—kesalahan ini baru terdeteksi di akhir, ketika sudah terlambat.\n\nMethodica hadir sebagai *co-researcher* AI yang membantu dari awal: dari formulasi hipotesis hingga validasi statistik hasil."
+          title: "1. Latar Belakang & Urgensi Penelitian",
+          content: "Salah satu hambatan utama mahasiswa dalam tahap awal Tugas Akhir (TA) adalah sulitnya menemukan kebaruan (*novelty*) penelitian di tengah jutaan publikasi ilmiah yang sudah ada. Proses peninjauan literatur secara manual membutuhkan waktu berbulan-bulan dan sangat rentan terhadap residu informasi yang tidak relevan.\n\nPenelitian ini mengusulkan solusi: Sistem otomasi pencarian gap riset yang mampu memproses ribuan abstrak jurnal dalam hitungan menit untuk mengidentifikasi topik yang belum dieksplorasi namun memiliki potensi signifikansi tinggi."
         },
         {
-          title: "Fitur Kunci yang Dibangun",
-          content: "**Hypothesis Generator**: mendapatkan input area penelitian, lalu menghasilkan hipotesis kandidat berdasarkan gap analysis dari literature database (Semantic Scholar API).\n\n**Experiment Template Engine**: menyarankan design eksperimen (RCT, quasi-experimental, observational) berdasarkan tujuan penelitian dan resources yang tersedia—200+ template siap pakai.\n\n**Statistical Analysis Suite**: integrasi langsung dengan Jupyter untuk menjalankan analisis statistik, lengkap dengan interpretasi hasil dalam bahasa natural.\n\n**Bias Detector**: mengevaluasi rancangan eksperimen dan menandai potensi bias dengan saran perbaikan konkret."
+          title: "2. Metodologi 'Gap Discovery' Berbasis AI",
+          content: "Alur kerja utama sistem mengandalkan sinergi antara beberapa teknologi NLP:\n\n- **Automated Data Acquisition**: Menggunakan *Scrapy context-aware spiders* untuk melakukan ekstraksi metadata dan abstrak secara legal dari repositori bereputasi (SINTA, IEEE, dll).\n- **Topic Mapping**: Implementasi algoritma **BERTopic** dan **NLP Transformers (Sentence-BERT)** untuk membedah ribuan abstrak menjadi klaster topik pada ruang latensi tinggi.\n- **Clustering Analysis**: Penerapan algoritma HDBSCAN untuk mengidentifikasi topik baru secara dinamis tanpa memerlukan pelabelan data manual (*Unsupervised Learning*)."
         },
         {
-          title: "Pembelajaran Teknis",
-          content: "Proyek ini adalah pertama kalinya saya bekerja serius dengan **scientific literature mining**. Menghubungkan Methodica ke Semantic Scholar API untuk paper retrieval membuka mata tentang kompleksitas knowledge graph dalam domain akademik.\n\nSalah satu insight menarik: model yang dilatih untuk mendeteksi bias eksperimen ternyata sangat sensitif terhadap framing bahasa. Kalimat yang secara semantik sama bisa menghasilkan prediksi bias yang berbeda—ini mendorong saya untuk mendalami **prompt robustness** dalam NLP."
+          title: "3. Pengembangan Aplikasi & Visualisasi",
+          content: "Sebagai sebuah aplikasi web, ThesisMiner menawarkan pengalaman pengguna yang intuitif:\n\n- **Knowledge Graph Visualization**: Pengguna dapat melihat persebaran riset melalui peta visual 2D. Area yang kosong secara visual menandakan potensi celah penelitian (*Research Gap*).\n- **Judul Recommendation Engine**: AI memberikan saran judul skripsi dengan menghubungkan kata kunci dari klaster topik yang memiliki kepadatan rendah namun relevansi tinggi terhadap tren riset global.\n- **Interactive Dashboard**: Dibangun menggunakan *React.js* dan visualisasi data dinamis untuk mempermudah pemetaan arah studi literatur."
         },
         {
-          title: "Validasi & Hasil",
-          content: "Pengujian dilakukan bersama 12 mahasiswa S2 dari jurusan sains dan sosial:\n\n- Efisiensi fase desain penelitian meningkat **65%** rata-rata\n- **91% akurasi** dalam mendeteksi potensi bias eksperimen\n- **200+ template** eksperimen tersedia di library\n- Rata-rata penghematan waktu: **3 minggu** per siklus penelitian"
+          title: "4. Hasil Uji Coba & Validasi Akademik",
+          content: "Melalui serangkaian pengujian terhadap dataset ribuan abstrak jurnal dan feedback dari mahasiswa akhir, diperoleh hasil:\n\n- **Efisiensi Waktu Literatur**: Mempercepat fase awal pencarian literatur review hingga **75%**.\n- **Akurasi Klasifikasi**: Model mencapai akurasi **88%** dalam menentukan klasifikasi topik secara otomatis.\n- **Akselerasi Judul**: Memungkinkan mahasiswa menemukan judul penelitian yang solid dan memiliki *novelty* dalam waktu kurang dari satu jam."
+        },
+        {
+          title: "5. Rancangan Website ThesisMiner",
+          content: "Website ThesisMiner dirancang sebagai platform riset berbasis AI yang ramah mahasiswa:\n\n- **Landing Page**: Hero dengan ilustrasi peta topik dinamis, klaim utama 'Temukan Celah Riset dalam 60 Detik', dan tombol 'Coba Gratis'.\n- **Topic Explorer**: Halaman utama dengan input pencarian jurnal → sistem menampilkan bubble chart interaktif dari klaster topik.\n- **Gap Detector**: Panel hasil yang menampilkan area kosong (research gap) dengan confidence score dan rekomendasi judul TA.\n- **History & Saved**: Pengguna bisa simpan sesi pencarian dan ekspor hasil ke PDF/Word.\n- **Tech Stack UI**: React.js, D3.js (visualisasi) | Python, BERTopic, Scrapy, FastAPI (backend)."
         }
       ],
       resources: [
-        { label: "Baca Dokumen Lengkap", url: "docs/Methodica_TA.docx" }
+        { label: "View on GitHub", url: "#" }
       ]
     }
   }
 ];
 
+const MARQUEE_ITEMS = ["Web Developer", "AI Engineer", "Full Stack", "UI / UX Designer", "Problem Solver"];
+const TECH_LOGOS = ["React", "Python", "Node.js", "Docker", "TensorFlow", "MongoDB", "MySQL", "Figma", "Git", "Next.js", "FastAPI", "PostgreSQL"];
+
+/* ---- Global State ---- */
+let lenis;
+
 /* ---- DOM Ready ---- */
 document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  initLenis();
   initNavbar();
   initMenuOverlay();
-  initScrollReveal();
   renderProjects();
+  initMarquees();
   initContactForm();
-  initHeroParallax();
+
+  // Animation sequences
+  initGSAPAnimations();
 });
+
+/* ---- Smooth Scroll (Lenis) ---- */
+function initLenis() {
+  lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // Connect Lenis to ScrollTrigger
+  lenis.on('scroll', ScrollTrigger.update);
+}
 
 /* ---- Navbar scroll effect ---- */
 function initNavbar() {
@@ -140,12 +181,12 @@ function initMenuOverlay() {
 
   menuBtn.addEventListener("click", () => {
     overlay.classList.add("active");
-    document.body.style.overflow = "hidden";
+    if (lenis) lenis.stop();
   });
 
   const closeMenu = () => {
     overlay.classList.remove("active");
-    document.body.style.overflow = "";
+    if (lenis) lenis.start();
   };
 
   menuClose.addEventListener("click", closeMenu);
@@ -154,24 +195,179 @@ function initMenuOverlay() {
       e.preventDefault();
       const target = document.querySelector(link.getAttribute("href"));
       closeMenu();
-      setTimeout(() => target?.scrollIntoView({ behavior: "smooth" }), 400);
+      if (target) {
+        lenis.scrollTo(target, { offset: 0, duration: 1.5 });
+      }
     });
   });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
 }
 
-/* ---- Scroll Reveal ---- */
-function initScrollReveal() {
-  const els = document.querySelectorAll(
-    ".about-inner, .section-header, .skills-grid, .timeline-item, .service-item, .contact-left, .contact-form, .skill-card"
-  );
-  els.forEach(el => el.classList.add("reveal"));
+/* ---- Dynamic Marquees ---- */
+function initMarquees() {
+  const marqueeContent = document.getElementById("marqueeContent");
+  if (marqueeContent) {
+    const content = MARQUEE_ITEMS.map(item => `<span>${item}</span><span class="dot-sep">✦</span>`).join("");
+    marqueeContent.innerHTML = content + content + content + content;
+  }
 
-  const observer = new IntersectionObserver(
-    (entries) => entries.forEach(e => e.isIntersecting && e.target.classList.add("visible")),
-    { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-  );
-  els.forEach(el => observer.observe(el));
+  const techMarqueeContent = document.getElementById("techMarqueeContent");
+  if (techMarqueeContent) {
+    const techContent = TECH_LOGOS.map(logo => `<span>${logo}</span>`).join("");
+    techMarqueeContent.innerHTML = techContent + techContent + techContent;
+  }
+}
+
+/* ---- GSAP Animation Engine ---- */
+function initGSAPAnimations() {
+  // 1. Hero Entrance
+  const heroTl = gsap.timeline();
+  heroTl
+    .to(".hero-last-name", { y: 0, opacity: 1, duration: 1.2, ease: "power4.out" })
+    .to(".hero-first-name", { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, "-=0.8")
+    .to(".hero-role, .hero-role-italic", { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: "power3.out" }, "-=0.6")
+    .from(".navbar", { y: -50, opacity: 0, duration: 1, ease: "power2.out" }, "-=1");
+
+  // 2. Parallax Hero
+  gsap.to(".hero-bg", {
+    yPercent: 30,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true
+    }
+  });
+
+  // 3. Staggered reveal for skills — repeatable
+  const skillCards = document.querySelectorAll(".skill-card");
+
+  function revealSkills(fromEnd = false) {
+    const cards = fromEnd ? [...skillCards].reverse() : [...skillCards];
+    cards.forEach((card, i) => {
+      setTimeout(() => {
+        card.style.transition = `opacity 0.45s ease, transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94)`;
+        card.classList.add("revealed");
+      }, i * 35);
+    });
+  }
+
+  function hideSkills() {
+    skillCards.forEach(card => {
+      card.style.transition = "none";
+      card.classList.remove("revealed");
+    });
+  }
+
+  ScrollTrigger.create({
+    trigger: ".skills-wrap",
+    start: "top 82%",
+    onEnter: () => revealSkills(false),
+    onLeaveBack: () => hideSkills(),
+    onEnterBack: () => revealSkills(true),
+    onLeave: () => hideSkills()
+  });
+
+  // 4. About Reveal (ifalf.com Style — color-based word reveal)
+  const aboutHeading = document.getElementById("aboutRevealTitle");
+  if (aboutHeading) {
+    const rawText = aboutHeading.innerText.trim();
+    aboutHeading.innerHTML = rawText
+      .split(/\s+/)
+      .map(w => `<span class="about-word">${w}</span>`)
+      .join(" ");
+
+    const wordSpans = aboutHeading.querySelectorAll(".about-word");
+
+    // Repeatable: plays each time section enters, resets when section leaves
+    ScrollTrigger.create({
+      trigger: ".about",
+      start: "top 65%",
+      onEnter: () => {
+        gsap.to(wordSpans, {
+          color: "rgba(255,255,255,1)",
+          duration: 0.5,
+          stagger: { each: 0.07, from: "start" },
+          ease: "power1.out",
+          overwrite: true
+        });
+      },
+      onLeave: () => {
+        gsap.set(wordSpans, { color: "rgba(255,255,255,0.12)" });
+      },
+      onEnterBack: () => {
+        gsap.to(wordSpans, {
+          color: "rgba(255,255,255,1)",
+          duration: 0.5,
+          stagger: { each: 0.07, from: "end" },
+          ease: "power1.out",
+          overwrite: true
+        });
+      },
+      onLeaveBack: () => {
+        gsap.set(wordSpans, { color: "rgba(255,255,255,0.12)" });
+      }
+    });
+  }
+
+  // Parallax photo backdrop
+  const aboutBg = document.getElementById("aboutPhotoBg");
+  if (aboutBg) {
+    gsap.to(aboutBg, {
+      yPercent: -20,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      }
+    });
+  }
+
+  // 4b. Fade in desc + button — repeatable
+  gsap.from(".about-desc, .about-footer", {
+    y: 40,
+    opacity: 0,
+    duration: 1.2,
+    stagger: 0.15,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".about-bottom",
+      start: "top 90%",
+      toggleActions: "play none none reverse",
+    }
+  });
+
+  // 5. Timeline staggered entrance
+  gsap.to(".timeline-item", {
+    x: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".timeline",
+      start: "top 80%",
+    }
+  });
+
+  // 6. Section Headers
+  gsap.utils.toArray(".section-header").forEach(header => {
+    gsap.to(header.children, {
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: header,
+        start: "top 90%",
+      }
+    });
+  });
+
 }
 
 /* ============================================================
@@ -200,13 +396,7 @@ function renderProjects() {
         </div>
         <h3 class="if-card-title">${proj.title}</h3>
         <p class="if-card-desc">${proj.desc}</p>
-        <div class="if-card-tags">
-          ${proj.tools.slice(0, 4).map(t => `<span class="if-tag">${t}</span>`).join("")}
-        </div>
         <div class="if-card-actions">
-          <a href="docs/${proj.filename}" target="_blank" class="if-btn-primary" onclick="event.stopPropagation()">
-            Visit Site <span class="if-btn-arrow">↗</span>
-          </a>
           <button class="if-btn-secondary" onclick="event.stopPropagation(); openProjectDetail(${i})">
             Read More
           </button>
@@ -217,17 +407,18 @@ function renderProjects() {
     grid.appendChild(card);
   });
 
-  /* Stagger observe cards */
-  const observer = new IntersectionObserver(
-    (entries) => entries.forEach((e, idx) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add("visible"), idx * 120);
-        observer.unobserve(e.target);
-      }
-    }),
-    { threshold: 0.1 }
-  );
-  document.querySelectorAll(".if-card").forEach(c => observer.observe(c));
+  /* GSAP staggered observe cards */
+  gsap.to(".if-card", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: 0.15,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: "#projectsGrid",
+      start: "top 85%",
+    }
+  });
 }
 
 /* ============================================================
@@ -256,20 +447,15 @@ function openProjectDetail(index) {
   const page = document.createElement("div");
   page.id = "projectDetailPage";
   page.className = "pd-page";
+  page.setAttribute("data-lenis-prevent", "true");
 
   const sectionsHtml = proj.caseStudy.sections.map((sec, si) => `
-    <section class="pd-section" style="animation-delay:${0.2 + si * 0.08}s">
+    <section class="pd-section">
       <h3 class="pd-section-title">${sec.title}</h3>
       <div class="pd-section-body">${parseMarkdown(sec.content)}</div>
     </section>
   `).join("");
 
-  const resourcesHtml = proj.caseStudy.resources.map(r => `
-    <a href="${r.url}" target="_blank" class="pd-resource-link">
-      <span class="pd-resource-icon">↗</span>
-      ${r.label}
-    </a>
-  `).join("");
 
   page.innerHTML = `
     <div class="pd-inner">
@@ -303,19 +489,12 @@ function openProjectDetail(index) {
           <span class="pd-meta-cat" style="color:${proj.accentColor}">${proj.category}</span>
           <span class="pd-meta-dot">·</span>
           <span class="pd-meta-year">${proj.year}</span>
-          <a href="docs/${proj.filename}" target="_blank" class="pd-meta-visit">
-            Open Document <span>↗</span>
-          </a>
         </div>
 
         <!-- Title -->
         <h1 class="pd-title">${proj.title}</h1>
         <p class="pd-tagline">${proj.subtitle}</p>
 
-        <!-- Tech tags -->
-        <div class="pd-tags">
-          ${proj.tools.map(t => `<span class="pd-tag" style="border-color:${proj.accentColor}33;color:${proj.accentColor}">${t}</span>`).join("")}
-        </div>
 
         <!-- Overview -->
         <div class="pd-overview">
@@ -330,30 +509,27 @@ function openProjectDetail(index) {
           ${sectionsHtml}
         </div>
 
-        <!-- Resources -->
-        <hr class="pd-divider">
-        <div class="pd-resources">
-          <h4 class="pd-resources-title">Resources</h4>
-          <div class="pd-resources-list">
-            ${resourcesHtml}
-          </div>
-        </div>
 
       </article>
     </div>
   `;
 
   document.body.appendChild(page);
-  document.body.style.overflow = "hidden";
 
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    page.classList.add("active");
-  }));
+  lenis.stop(); // Stop global Lenis scroll
+
+  gsap.to(page, { opacity: 1, duration: 0.5, pointerEvents: "all" });
 
   const close = () => {
-    page.classList.remove("active");
-    document.body.style.overflow = "";
-    setTimeout(() => page.remove(), 400);
+    gsap.to(page, {
+      opacity: 0,
+      duration: 0.4,
+      pointerEvents: "none",
+      onComplete: () => {
+        page.remove();
+        if (lenis) lenis.start(); // Resume global Lenis scroll
+      }
+    });
   };
 
   document.getElementById("pdBackBtn").addEventListener("click", close);
@@ -388,15 +564,4 @@ function initContactForm() {
       }, 3000);
     }, 1200);
   });
-}
-
-/* ---- Hero Parallax ---- */
-function initHeroParallax() {
-  const heroBg = document.querySelector(".hero-bg");
-  if (!heroBg) return;
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    if (scrollY <= document.querySelector(".hero").offsetHeight)
-      heroBg.style.transform = `scale(1.05) translateY(${scrollY * 0.25}px)`;
-  }, { passive: true });
 }
