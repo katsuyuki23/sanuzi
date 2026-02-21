@@ -531,10 +531,9 @@ button {
 
 /* Bottom row: desc + button side by side */
 .about-bottom {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 4rem;
-  align-items: end;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -544,6 +543,13 @@ button {
   line-height: 1.8;
   color: var(--gray);
   max-width: 540px;
+}
+
+.about-gif {
+  max-width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  opacity: 0.9;
 }
 
 .about-footer {
