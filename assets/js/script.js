@@ -12,29 +12,17 @@ const PROJECTS = [
     image: "assets/img/project-micromodeling.jpg",
     tools: ["React", "Node.js", "PostgreSQL", "WebXR", "Three.js"],
     accentColor: "#8b5cf6",
-    desc: "Sistem digital yang mengubah cara produk kerajinan tangan dijual online — pembeli mengkonfigurasi produk secara langsung dan harga dihitung real-time berdasarkan parameter produksi.",
+    desc: "Platform yang mengubah produk kerajinan tangan menjadi entitas digital parametrik dengan pricing engine real-time berbasis kapasitas produksi.",
     caseStudy: {
-      overview: "Platform Micromodeling Artisan adalah sistem digital yang mengubah cara produk kerajinan tangan (artisan) dijual secara online. Alih-alih hanya menampilkan foto dan harga tetap, platform ini memungkinkan pembeli mengkonfigurasi produk secara langsung (pilih ukuran, material, warna, dll), dan harga akan otomatis dihitung secara real-time berdasarkan parameter yang dipilih. Selain itu, platform ini memiliki sistem manajemen kapasitas produksi dengan dynamic pricing otomatis.",
+      overview: "Platform Micromodeling Artisan memperkenalkan cara baru yang belum lazim dipakai di ekosistem marketplace Indonesia: mengubah produk kerajinan tangan dari sekadar foto+harga statis menjadi entitas digital yang bisa dikonfigurasi, dihitung harganya secara real-time, dan dikelola kapasitas produksinya secara otomatis.",
       sections: [
         {
-          title: "Gambaran Umum & Masalah",
-          content: "Masalah yang Diselesaikan:\n\n- Harga tidak transparan — Pembeli tidak tahu kenapa harga segini, artisan pun sering jual rugi\n- Produk sulit dikustomisasi — Marketplace biasa hanya foto + deskripsi statis\n- Artisan overbooked — Tidak ada sistem yang mengatur kapasitas pesanan\n- Sulit bersaing global — Tanpa standar data, produk lokal tidak bisa bersaing internasional"
+          title: "Inovasi Kunci",
+          content: "1. **Parametric Product Engine** — Formula Harga Berbasis Variabel Produksi: **P = B + (M × α) + (L × β) + (C × γ)**. \n\n2. **Capacity-Linked Dynamic Pricing** — Harga naik otomatis saat slot pesanan hampir penuh untuk melindungi kualitas & beban kerja artisan.\n\n3. **WebXR / AR Preview** — Fitur preview produk 3D langsung di ruangan Anda menggunakan kamera HP untuk mengurangi keraguan visual."
         },
         {
-          title: "Model Harga Parametrik",
-          content: "Harga dihitung dengan rumus: **P = B + (M × α) + (L × β) + (C × γ)**\n\n- **B** — Harga dasar\n- **M** — Biaya material (kayu jati vs kayu pinus)\n- **α** — Bobot material (1.5 untuk material premium)\n- **L** — Jam kerja (labor hours)\n- **β** — Nilai per jam kerja\n- **C** — Indeks kompleksitas ukiran\n- **γ** — Bobot kompleksitas (0.8–2.0)"
-        },
-        {
-          title: "Komponen Teknis",
-          content: "Frontend:\n\n- **React / Next.js** — tampilan web interaktif\n- **Three.js** — preview produk 3D di browser\n- **WebXR** — fitur AR (lihat produk di ruangan nyata via kamera HP)\n\nBackend:\n\n- **Node.js / Laravel** — server & logika bisnis\n- **PostgreSQL** — database produk, pesanan, kapasitas"
-        },
-        {
-          title: "Hipotesis & Roadmap",
-          content: "Hipotesis Penelitian:\n\n- **H1:** Platform parametrik meningkatkan margin artisan ≥ +15%\n- **H2:** Fitur AR preview meningkatkan conversion rate ≥ +20%\n- **H3:** Dynamic capacity pricing mengurangi overbooking ≥ -30%\n\nRoadmap:\n\n- Bulan 1–2 → Analisis kebutuhan\n- Bulan 3–4 → Desain sistem & model data\n- Bulan 5–7 → Development MVP\n- Bulan 8–9 → Uji coba dengan komunitas artisan\n- Bulan 10–12 → Evaluasi & publikasi ilmiah"
-        },
-        {
-          title: "Dampak & Luaran",
-          content: "Dampak Jangka Panjang:\n\n- **Standarisasi digital** produk artisan Indonesia\n- **Daya saing global** meningkat karena data produk terstruktur\n- **Ekosistem kreatif berbasis data** — bukan sekadar jualan online\n- **Model replikasi** ke sektor lain: fashion lokal, furniture, kerajinan logam"
+          title: "Perbandingan vs Marketplace Biasa",
+          content: "- **Harga kustomisasi real-time:** Ada (formula otomatis) vs Tidak ada.\n- **Manajemen kapasitas:** Ada (slot-based) vs Tidak ada.\n- **Preview AR:** Ada (WebXR) vs Tidak ada.\n- **Metrics Industri:** Lead Time Score & Complexity Index vs Tanpa data."
         }
       ],
       resources: [
@@ -51,29 +39,17 @@ const PROJECTS = [
     image: "assets/img/project-validasi.jpg",
     tools: ["React", "Node.js", "Statistics", "AI Copywriting", "MongoDB"],
     accentColor: "#10b981",
-    desc: "Platform untuk menguji apakah ide bisnismu layak dijalankan — sebelum kamu membangun produknya. Decision engine kuantitatif memberikan keputusan GO / ITERATE / KILL berbasis data.",
+    desc: "Platform 'rem cerdas' yang menggabungkan landing page eksperimen dengan statistical decision engine untuk keputusan GO / ITERATE / KILL.",
     caseStudy: {
-      overview: "Platform Validasi Ide Bisnis adalah alat untuk menguji apakah ide bisnismu layak dijalankan sebelum membangun produknya. Banyak startup gagal bukan karena kurang modal, tapi karena terlalu cepat membangun produk yang tidak diinginkan pasar. Platform ini hadir sebagai 'rem cerdas' dengan landing page generator otomatis dan decision engine berbasis statistik inferensial.",
+      overview: "Platform ini menggabungkan eksperimen landing page sebagai instrumen riset dengan statistical decision engine yang memberi verdict berbasis data. Di Indonesia, hampir tidak ada tool validasi yang menggunakan pendekatan statistik inferensial untuk segmen pre-product founder.",
       sections: [
         {
-          title: "Masalah: Bias Founder",
-          content: "Bias Umum Calon Founder:\n\n- **Overconfidence bias** — 'Ide ini pasti laku!' padahal belum diuji\n- **Confirmation bias** — Hanya cari bukti yang mendukung ide sendiri\n- **Survivorship bias** — Lihat startup sukses, lupa yang gagal jauh lebih banyak"
+          title: "Inovasi Kunci",
+          content: "1. **Quantitative Decision Engine** — Interpretasi angka melalui Confidence Interval, Expected Profit Model, dan Bayesian stopping rules.\n\n2. **Bias Mitigation Framework** — Mekanisme anti-bias (Pre-commitment threshold, Blind result reveal, Devil's Advocate mode).\n\n3. **Sequential Testing Protocol** — Menghemat anggaran iklan 40–60% dengan fixed-horizon testing yang cerdas."
         },
         {
-          title: "Decision Engine (Inti Inovasi)",
-          content: "Formula Keputusan:\n\n- **CR (Conversion Rate)** = Jumlah Signup / Jumlah Visitor\n- **CI (Confidence Interval)** = CR ± Z × √(CR × (1 - CR) / n)\n- **Expected Profit** = (CR × LTV) - CAC\n- **Risk Index** = 1 - Lower Bound (CI)\n\nMatriks Keputusan:\n\n- CR < 5% → ❌ KILL — hentikan, cari ide lain\n- CR 5–10% → 🔄 ITERATE — ubah proposisi nilai\n- CR > 10% → ✅ GO — lanjut ke tahap build"
-        },
-        {
-          title: "Komponen Teknis",
-          content: "Frontend:\n\n- Template generator landing page (tinggal isi ide, langsung jadi)\n- Auto-suggestion copywriting (AI bantu tulis headline & CTA)\n- Dashboard analytics visual\n\nBackend:\n\n- Visitor tracking per eksperimen\n- Email capture & conversion logging\n- Statistical calculator (CI, CR, Risk Score otomatis)"
-        },
-        {
-          title: "Keunggulan vs Builder Biasa",
-          content: "Fitur eksklusif yang tidak ada di landing page builder biasa:\n\n- **Decision engine kuantitatif** — memberikan keputusan objektif berbasis data\n- **Risk scoring otomatis** — mengukur tingkat risiko ide secara statistik\n- **Economic feasibility estimator** — hitung kelayakan ekonomi sebelum build\n- **Mekanisme Stop Early** — hentikan eksperimen jika sinyal sudah jelas"
-        },
-        {
-          title: "MVP & Pengembangan",
-          content: "MVP 30 Hari:\n\n- Minggu 1 → Template landing page + visitor counter\n- Minggu 2 → Email capture + dashboard dasar\n- Minggu 3 → Decision engine + perhitungan CI otomatis\n- Minggu 4 → UX improvement + pengujian pengguna\n\nPotensi Lanjutan:\n\n- **A/B testing otomatis** — bandingkan 2 versi headline sekaligus\n- **AI copy optimization** — AI rekomendasikan kata yang paling convert\n- **Bayesian updating** — model terus belajar dari setiap eksperimen"
+          title: "Fitur Eksklusif",
+          content: "- **Risk Index:** Mengukur tingkat spekulasi keputusan secara kuantitatif.\n- **Idea Genealogy:** Menyimpan setiap ide dalam graph nodes untuk mempelajari pola kegagalan historis.\n- **Counterfactual Scenario:** Mensimulasikan skenario 'bagaimana jika' pada model bisnis."
         }
       ],
       resources: [
@@ -90,29 +66,17 @@ const PROJECTS = [
     image: "assets/img/project-danamasjid.jpg",
     tools: ["React", "Laravel", "MySQL", "Midtrans", "OpenAI API"],
     accentColor: "#f59e0b",
-    desc: "Platform web yang membantu masjid, musholla, dan komunitas kecil mengelola dana infak, zakat, dan donasi secara transparan dan digital — dengan QR donasi, laporan otomatis, dan dashboard publik real-time.",
+    desc: "Infrastruktur kepercayaan digital hyperlocal masjid/komunitas dengan transparansi radikal, QR per program, dan laporan keuangan AI.",
     caseStudy: {
-      overview: "Website Manajemen Dana Sosial Masjid & Komunitas Mikro adalah platform web sederhana yang membantu masjid, musholla, dan komunitas kecil mengelola dana infak, zakat, dan donasi secara transparan dan digital. Tidak perlu lagi pencatatan manual — semua orang bisa lihat saldo dan penggunaan dana secara real-time. Dirancang sebagai solusi hyperlocal dari masjid RT/RW hingga yayasan sosial lokal.",
+      overview: "Platform ini mengisi ceruk yang diabaikan oleh fintech besar: manajemen keuangan hyperlocal untuk komunitas terkecil. Solusi ini tentang membangun infrastruktur kepercayaan digital di level paling akar rumput.",
       sections: [
         {
-          title: "Masalah yang Diselesaikan",
-          content: "Masalah utama komunitas:\n\n- **Pencatatan manual** — Rentan kesalahan, sulit diaudit\n- **Transparansi rendah** — Jamaah ragu berdonasi karena tidak tahu uang digunakan untuk apa\n- **Laporan tidak real-time** — Informasi keuangan baru diketahui saat rapat bulanan\n- **Trust issue** — Ketidakpercayaan → donasi menurun → program sosial terhambat"
+          title: "Inovasi Kunci",
+          content: "1. **Radical Transparency Dashboard** — Public-First: Semua orang bisa melihat saldo dan riwayat transaksi tanpa login untuk membangun Trust Loop.\n\n2. **Program-Linked QR Code** — 'Earmarked giving' yang meningkatkan jumlah donasi melalui kejelasan tujuan spesifik.\n\n3. **Natural Language AI Report** — Mengubah angka kaku menjadi narasi Bahasa Indonesia yang hangat dan shareable menggunakan NLG."
         },
         {
-          title: "Fitur Utama Platform",
-          content: "1. Dashboard Transparansi Publik:\n\n- Saldo terkini yang bisa dilihat siapa saja (tanpa login)\n- Breakdown per program (renovasi, santunan, kegiatan, dll)\n- Grafik tren donasi bulanan\n\n2. QR Donasi + Auto Ledger:\n\n- Setiap program punya QR Code sendiri\n- Donasi masuk langsung tercatat otomatis tanpa input manual\n\n3. AI Summary Laporan Bulanan:\n\n- Laporan keuangan digenerate otomatis dalam bahasa Indonesia natural"
-        },
-        {
-          title: "Stack Teknologi",
-          content: "Stack yang dipilih (Sederhana, Terbukti):\n\n- **Frontend** → React / Next.js atau Vue.js\n- **Backend** → Laravel / Node.js\n- **Database** → MySQL / PostgreSQL\n- **Payment** → Midtrans / Xendit (untuk QR & transfer)\n- **AI** → OpenAI API (untuk natural language summary)"
-        },
-        {
-          title: "Model Bisnis & Peluang",
-          content: "Paket Layanan:\n\n- **Starter** → Rp 50.000/bulan — Masjid kecil, 1 program aktif\n- **Standard** → Rp 100.000/bulan — Masjid dengan beberapa program\n- **Pro** → Rp 150.000/bulan — Fitur AI + multi-admin + laporan advanced\n- **White-label** → Negosiasi — Yayasan / ormas yang ingin branding sendiri\n\nTotal Addressable Market:\n\n- 🕌 Indonesia: > 800.000 masjid aktif\n- 💡 Penetrasi 1% = 8.000 pelanggan = **Rp 400 juta–1,2 miliar/bulan ARR**"
-        },
-        {
-          title: "Roadmap Pengembangan",
-          content: "MVP (Bulan 1–2):\n\n- Registrasi masjid/komunitas\n- Dashboard saldo real-time\n- QR Code donasi dasar\n\nFase 2–3 (Bulan 3–6):\n\n- Integrasi payment gateway\n- AI summary laporan bulanan\n- Notifikasi WhatsApp otomatis\n- Multi-admin & role management\n\nFase 4 (Bulan 7+):\n\n- White-label solution & Mobile app (PWA)"
+          title: "Keunikan vs Platform Besar",
+          content: "- **Trust Score:** Reputasi komunitas berdasarkan konsistensi pelaporan.\n- **Micro-endowment Simulation:** Simulasi rencana dampak sosial jangka panjang.\n- **Hyperlocal Focus:** Dirancang khusus untuk masjid RT/RW dan yayasan lokal kecil."
         }
       ],
       resources: [
