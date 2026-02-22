@@ -6,7 +6,9 @@
 
 Personal portfolio website showcasing specialized projects in AI research, decision engines, and hyperlocal tech solutions. Designed with a premium "Space & AI" aesthetic.
 
-## 🚀 Key Features
+🔗 **Live Demo**: [sanuzi.vercel.app](https://sanuzi.vercel.app/)
+
+## 🚀 Key Features / Fitur Utama
 
 - **Space Hero Section**: High-resolution Milky Way video background with profile overlay.
 - **Interactive Tech Marquee**: Dynamic, clickable icon strip for the tech stack.
@@ -35,11 +37,15 @@ Personal portfolio website showcasing specialized projects in AI research, decis
 └── README.md       # Project overview
 ```
 
-## 🏆 Featured Projects
+## 🏆 Featured Projects / Proyek Utama
 
 1.  **Platform Micromodeling Artisan**: Parametric pricing & AR for artisanal products.
 2.  **Platform Validasi Ide Bisnis**: Statistical decision engine for market testing.
 3.  **Website Dana Sosial Masjid**: Hyperlocal FinTech & AI reporting for communities.
+
+## 🇮🇩 Ringkasan (Bahasa Indonesia)
+
+Portfolio pribadi UZI, seorang Web Developer & AI Engineer. Dibangun menggunakan HTML, CSS, dan Vanilla JavaScript, dengan animasi interaktif menggunakan GSAP serta Lenis untuk smooth scrolling. Tujuan website ini adalah representasi profesional sekaligus eksplorasi kreativitas dalam membangun UI yang ringan, performatif, dan estetik tanpa menggunakan framework besar.
 
 ## 📝 License
 
@@ -47,3 +53,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 *Built with ❤️ by SANUZI*
+
