@@ -1,45 +1,40 @@
-﻿﻿/* ===== SCRIPT.JS - UZI Portfolio ===== */
-console.log("Script v2.1 loaded (ThesisMiner Update)");
+﻿/* ===== SCRIPT.JS - UZI Portfolio ===== */
+console.log("Script v3.0 loaded (Portfolio Update)");
 
 /* ---- Project Data ---- */
 const PROJECTS = [
   {
     id: 1,
-    title: "NeuroWeave",
-    subtitle: "AI Personal Knowledge Navigator",
-    category: "AI / Web App",
-    year: "2024",
-    filename: "NeuroWeave_TA.docx",
-    image: "assets/img/project-neuroweave.png",
-    tools: ["Python", "NLP", "React", "FastAPI", "MongoDB"],
-    accentColor: "#60a5fa",
-    desc: "Sistem navigasi pengetahuan personal berbasis AI yang membantu pengguna mengelola dan menghubungkan informasi secara cerdas.",
+    title: "Micromodeling Artisan",
+    subtitle: "Platform Parametrik Produk Lokal",
+    category: "Platform / E-Commerce",
+    year: "2025",
+    image: "assets/img/project-micromodeling.jpg",
+    tools: ["React", "Node.js", "PostgreSQL", "WebXR", "Three.js"],
+    accentColor: "#8b5cf6",
+    desc: "Sistem digital yang mengubah cara produk kerajinan tangan dijual online — pembeli mengkonfigurasi produk secara langsung dan harga dihitung real-time berdasarkan parameter produksi.",
     caseStudy: {
-      overview: "NeuroWeave dikembangkan sebagai solusi cerdas untuk mengatasi fenomena *information overload* pada manajemen pengetahuan personal. Penelitian ini mengintegrasikan teknologi *Natural Language Processing* (NLP) dengan representasi data berbasis graf untuk menciptakan ekosistem pengetahuan yang mampu memahami konteks dan keterkaitan antar ide secara otonom.",
+      overview: "Platform Micromodeling Artisan adalah sistem digital yang mengubah cara produk kerajinan tangan (artisan) dijual secara online. Alih-alih hanya menampilkan foto dan harga tetap, platform ini memungkinkan pembeli mengkonfigurasi produk secara langsung (pilih ukuran, material, warna, dll), dan harga akan otomatis dihitung secara real-time berdasarkan parameter yang dipilih. Selain itu, platform ini memiliki sistem manajemen kapasitas produksi dengan dynamic pricing otomatis.",
       sections: [
         {
-          title: "Platform & Bidang",
-          content: "**Platform:** Aplikasi Web berbasis browser (Web App) — dapat diakses dari perangkat apa pun tanpa instalasi.\n\n**Bidang:** Produktivitas Personal & Manajemen Pengetahuan (*Personal Knowledge Management / PKM*). Ditujukan untuk peneliti, mahasiswa, dan profesional yang bekerja dengan volume informasi tinggi.\n\n**Berbasis:** Kecerdasan Buatan (AI) dengan pendekatan **Semantic Graph** — informasi direpresentasikan sebagai jaringan node yang saling terhubung berdasarkan makna, bukan sekadar folder atau tag.\n\n**Metode:**\n\n- **Graph-Based Knowledge Representation** — memodelkan pengetahuan sebagai graf semantik non-linear.\n- **Sentence Transformers** — mengonversi teks menjadi vektor makna (embeddings) untuk pemahaman konteks.\n- **NER (Named Entity Recognition)** — ekstraksi otomatis entitas penting dari teks.\n- **Topic Modeling (LDA)** — pengelompokan konsep berbasis kemiripan tematik tanpa pelabelan manual."
+          title: "Gambaran Umum & Masalah",
+          content: "Masalah yang Diselesaikan:\n\n- Harga tidak transparan — Pembeli tidak tahu kenapa harga segini, artisan pun sering jual rugi\n- Produk sulit dikustomisasi — Marketplace biasa hanya foto + deskripsi statis\n- Artisan overbooked — Tidak ada sistem yang mengatur kapasitas pesanan\n- Sulit bersaing global — Tanpa standar data, produk lokal tidak bisa bersaing internasional"
         },
         {
-          title: "1. Latar Belakang & Rumusan Masalah",
-          content: "Paradoks informasi modern menunjukkan bahwa peningkatan volume data seringkali berbanding terbalik dengan kemudahan akses pengetahuan. Aplikasi pencatatan konvensional umumnya terbatas pada penyimpanan linear atau berbasis folder yang statis. Masalah utamanya adalah **kurangnya pemahaman semantik** pada sistem, sehingga hubungan implisit antar informasi yang berbeda seringkali terputus.\n\nNeuroWeave menjawab tantangan ini: Bagaimana membangun sistem yang mampu melakukan manajemen pengetahuan non-linear dengan meniru cara kerja asosiatif otak manusia?"
+          title: "Model Harga Parametrik",
+          content: "Harga dihitung dengan rumus: **P = B + (M × α) + (L × β) + (C × γ)**\n\n- **B** — Harga dasar\n- **M** — Biaya material (kayu jati vs kayu pinus)\n- **α** — Bobot material (1.5 untuk material premium)\n- **L** — Jam kerja (labor hours)\n- **β** — Nilai per jam kerja\n- **C** — Indeks kompleksitas ukiran\n- **γ** — Bobot kompleksitas (0.8–2.0)"
         },
         {
-          title: "2. Metodologi Penelitian",
-          content: "Penelitian ini menggunakan pendekatan **Graph-Based Knowledge Representation**. Metodologi inti mencakup:\n\n- **Semantic Extraction**: Menggunakan *Sentence Transformers* untuk mengonversi teks mentah menjadi vektor padat (embeddings).\n- **Automated Entity Relationship**: Algoritma NER (*Named Entity Recognition*) digunakan untuk mengekstraksi entitas kunci yang kemudian dimodelkan sebagai *nodes*.\n- **Unsupervised Learning**: Penerapan algoritma *Topic Modeling* (LDA) untuk mengelompokkan konsep-konsep berdasarkan kemiripan tematik secara otomatis tanpa intervensi manual."
+          title: "Komponen Teknis",
+          content: "Frontend:\n\n- **React / Next.js** — tampilan web interaktif\n- **Three.js** — preview produk 3D di browser\n- **WebXR** — fitur AR (lihat produk di ruangan nyata via kamera HP)\n\nBackend:\n\n- **Node.js / Laravel** — server & logika bisnis\n- **PostgreSQL** — database produk, pesanan, kapasitas"
         },
         {
-          title: "3. Implementasi Sistem (Web App)",
-          content: "Arsitektur aplikasi dibangun dengan fokus pada performa dan skalabilitas:\n\n- **Backend**: *FastAPI* dipilih karena kemampuannya menangani operasi asinkron dengan latensi rendah (< 240ms).\n- **Database**: Kombinasi *MongoDB* untuk penyimpanan dokumen dan *Vector Database* untuk pencarian semantik.\n- **Frontend**: *React.js* yang diintegrasikan dengan *Three.js* untuk menghasilkan visualisasi graf 3D interaktif yang memungkinkan pengguna melakukan eksplorasi pengetahuan secara spasial."
+          title: "Hipotesis & Roadmap",
+          content: "Hipotesis Penelitian:\n\n- **H1:** Platform parametrik meningkatkan margin artisan ≥ +15%\n- **H2:** Fitur AR preview meningkatkan conversion rate ≥ +20%\n- **H3:** Dynamic capacity pricing mengurangi overbooking ≥ -30%\n\nRoadmap:\n\n- Bulan 1–2 → Analisis kebutuhan\n- Bulan 3–4 → Desain sistem & model data\n- Bulan 5–7 → Development MVP\n- Bulan 8–9 → Uji coba dengan komunitas artisan\n- Bulan 10–12 → Evaluasi & publikasi ilmiah"
         },
         {
-          title: "4. Evaluasi & Kontribusi",
-          content: "Hasil pengujian sistem terhadap dataset 10.000+ dokumen menunjukkan:\n\n- **Akurasi Retrieval 94%**: Melampaui metode pencarian berbasis *keyword* tradisional dalam hal pemahaman konteks.\n- **Efisiensi Navigasi**: Reduksi waktu pencarian informasi hingga **67%** pada uji coba tingkat pengguna.\n\nPenelitian ini memberikan kontribusi pada pengembangan sistem *Digital Brain* yang lebih intuitif dan adaptif terhadap kebutuhan riset maupun produktivitas profesional."
-        },
-        {
-          title: "5. Rancangan Website NeuroWeave",
-          content: "Website NeuroWeave dirancang sebagai **platform Web App** interaktif berbasis AI dengan tampilan futuristik:\n\n- **Landing Page**: Hero section dengan animasi neural network, tagline utama, dan CTA untuk memulai.\n- **Dashboard Utama**: Interface graf 3D interaktif menggunakan Three.js — pengguna bisa drag, zoom, dan klik node pengetahuan.\n- **Editor Note**: Rich-text editor bertenaga AI yang secara otomatis mengidentifikasi entitas dan membuat koneksi ke catatan lain.\n- **Search Intelligence**: Pencarian semantik dengan hasil berupa kartu koneksi, bukan sekadar list teks.\n- **Tech Stack Frontend**: React.js, TailwindCSS, Three.js.\n- **Tech Stack Backend**: FastAPI (Python), MongoDB, Vector Database (pgvector/Qdrant)."
+          title: "Dampak & Luaran",
+          content: "Dampak Jangka Panjang:\n\n- **Standarisasi digital** produk artisan Indonesia\n- **Daya saing global** meningkat karena data produk terstruktur\n- **Ekosistem kreatif berbasis data** — bukan sekadar jualan online\n- **Model replikasi** ke sektor lain: fashion lokal, furniture, kerajinan logam"
         }
       ],
       resources: [
@@ -49,41 +44,36 @@ const PROJECTS = [
   },
   {
     id: 2,
-    title: "BizPilot",
-    subtitle: "Autonomous Micro Business AI",
-    category: "AI / Automation",
-    year: "2024",
-    filename: "BizPilot_TA.docx",
-    image: "assets/img/project-bizpilot.png",
-    tools: ["Python", "Machine Learning", "Node.js", "MongoDB", "Docker"],
-    accentColor: "#a78bfa",
-    desc: "Platform AI otonom untuk bisnis mikro yang mengautomasi perencanaan, operasional, dan pengambilan keputusan bisnis.",
+    title: "Validasi Ide Bisnis",
+    subtitle: "Micro-Market Testing & Decision Engine",
+    category: "Platform / Analytics",
+    year: "2025",
+    image: "assets/img/project-validasi.jpg",
+    tools: ["React", "Node.js", "Statistics", "AI Copywriting", "MongoDB"],
+    accentColor: "#10b981",
+    desc: "Platform untuk menguji apakah ide bisnismu layak dijalankan — sebelum kamu membangun produknya. Decision engine kuantitatif memberikan keputusan GO / ITERATE / KILL berbasis data.",
     caseStudy: {
-      overview: "BizPilot merupakan proyek penelitian yang mengeksplorasi potensi **Autonomous AI Agents** dalam mendukung keberlanjutan sektor UMKM. Melalui implementasi sistem cerdas yang mampu melakukan analisis prediktif dan automasi operasional, BizPilot bertujuan untuk mengurangi dependensi pelaku bisnis mikro terhadap tim ahli manusia yang mahal.",
+      overview: "Platform Validasi Ide Bisnis adalah alat untuk menguji apakah ide bisnismu layak dijalankan sebelum membangun produknya. Banyak startup gagal bukan karena kurang modal, tapi karena terlalu cepat membangun produk yang tidak diinginkan pasar. Platform ini hadir sebagai 'rem cerdas' dengan landing page generator otomatis dan decision engine berbasis statistik inferensial.",
       sections: [
         {
-          title: "Platform & Bidang",
-          content: "**Platform:** Aplikasi Web berbasis SaaS (*Software as a Service*) — diakses via browser, tanpa instalasi, berbasis subscription.\n\n**Bidang:** Kewirausahaan Mikro & UMKM (*Micro Business / SME Automation*). Ditujukan untuk pemilik usaha kecil, pedagang, dan pelaku UMKM yang tidak memiliki tim analis bisnis.\n\n**Berbasis:** Kecerdasan Buatan (AI) dengan pendekatan **Multi-Agent System** — setiap fungsi bisnis dijalankan oleh agen AI yang bekerja secara otonom dan terspesialisasi, layaknya sebuah tim konsultan digital.\n\n**Metode:**\n\n- **LSTM (Long Short-Term Memory)** — prediksi tren penjualan dan kebutuhan stok berdasarkan data historis.\n- **Multi-Agent AI Architecture** — agen terpisah untuk forecasting, keuangan, dan rekomendasi.\n- **Reinforcement Learning (Contextual Bandits)** — sistem belajar dan beradaptasi dari keputusan nyata pemilik bisnis.\n- **RabbitMQ Message Queue** — sinkronisasi data real-time antar agen tanpa jeda."
+          title: "Masalah: Bias Founder",
+          content: "Bias Umum Calon Founder:\n\n- **Overconfidence bias** — 'Ide ini pasti laku!' padahal belum diuji\n- **Confirmation bias** — Hanya cari bukti yang mendukung ide sendiri\n- **Survivorship bias** — Lihat startup sukses, lupa yang gagal jauh lebih banyak"
         },
         {
-          title: "1. Identifikasi Masalah",
-          content: "Sektor bisnis mikro seringkali gagal naik kelas karena keterbatasan akses terhadap analisis pasar yang akurat dan pengelolaan stok yang tidak efisien. Pengambilan keputusan yang hanya mengandalkan intuisi pemilik tanpa dukungan data empiris sering menyebabkan *deadstock* dan ketidakstabilan arus kas (cash flow).\n\nRumusan masalah yang diangkat: Sejauh mana sistem AI otonom dapat menggantikan fungsi konsultan bisnis tradisional dalam mengelola strategi operasional harian bisnis mikro?"
+          title: "Decision Engine (Inti Inovasi)",
+          content: "Formula Keputusan:\n\n- **CR (Conversion Rate)** = Jumlah Signup / Jumlah Visitor\n- **CI (Confidence Interval)** = CR ± Z × √(CR × (1 - CR) / n)\n- **Expected Profit** = (CR × LTV) - CAC\n- **Risk Index** = 1 - Lower Bound (CI)\n\nMatriks Keputusan:\n\n- CR < 5% → ❌ KILL — hentikan, cari ide lain\n- CR 5–10% → 🔄 ITERATE — ubah proposisi nilai\n- CR > 10% → ✅ GO — lanjut ke tahap build"
         },
         {
-          title: "2. Pendekatan Algoritmik",
-          content: "Sistem ini dibangun menggunakan arsitektur **Multi-Agent AI**. Setiap agen memiliki spesialisasi:\n\n- **Forecasting Agent**: Menggunakan model *Long Short-Term Memory* (LSTM) untuk memprediksi tren penjualan dan permintaan stok.\n- **Financial Intelligence Agent**: Melakukan optimasi alokasi dana secara otomatis berdasarkan data historis dan proyeksi pengeluaran.\n- **Adaptive Learning**: Penerapan *Reinforcement Learning* (Contextual Bandits) untuk menyesuaikan rekomendasi sistem berdasarkan umpan balik langsung dari pemilik bisnis."
+          title: "Komponen Teknis",
+          content: "Frontend:\n\n- Template generator landing page (tinggal isi ide, langsung jadi)\n- Auto-suggestion copywriting (AI bantu tulis headline & CTA)\n- Dashboard analytics visual\n\nBackend:\n\n- Visitor tracking per eksperimen\n- Email capture & conversion logging\n- Statistical calculator (CI, CR, Risk Score otomatis)"
         },
         {
-          title: "3. Pengembangan Aplikasi Web",
-          content: "Aplikasi ini dirancang sebagai platform *Enterprise-Grade* untuk skala mikro:\n\n- **Scalability**: Seluruh modul sistem dikemas dalam *Docker containers* untuk memastikan kemudahan *deployment*.\n- **Real-time Processing**: Integrasi *RabbitMQ* sebagai perantara pesan (*message queue*) antar agen AI untuk memastikan sinkronisasi data tanpa jeda.\n- **Interface**: Dashboard berbasis web yang responsif dengan visualisasi metrik bisnis yang mudah diinterpretasikan."
+          title: "Keunggulan vs Builder Biasa",
+          content: "Fitur eksklusif yang tidak ada di landing page builder biasa:\n\n- **Decision engine kuantitatif** — memberikan keputusan objektif berbasis data\n- **Risk scoring otomatis** — mengukur tingkat risiko ide secara statistik\n- **Economic feasibility estimator** — hitung kelayakan ekonomi sebelum build\n- **Mekanisme Stop Early** — hentikan eksperimen jika sinyal sudah jelas"
         },
         {
-          title: "4. Hasil & Analisis Dampak",
-          content: "Uji coba selama 6 bulan pada 15 pilot UMKM menunjukkan hasil signifikan:\n\n- **Peningkatan Efisiensi**: Automasi laporan dan pengingat stok hingga **85%**.\n- **Akurasi Prediksi**: Meningkat secara gradual hingga mencapai **87%** setelah fase *fine-tuning* model.\n- **Kesehatan Finansial**: Pengurangan insiden *deadstock* sebesar **43%**, meningkatkan profitabilitas bersih secara keseluruhan."
-        },
-        {
-          title: "5. Rancangan Website BizPilot",
-          content: "Website BizPilot dirancang sebagai **platform SaaS Web App** yang clean dan data-centric:\n\n- **Landing Page**: Hero dengan animasi grafik real-time bergerak, value proposition singkat, dan tombol 'Mulai Gratis'.\n- **Dashboard Bisnis**: Overview KPI harian (Pendapatan, Stok, Prediksi) dalam card metrics dengan grafik line/bar interaktif (Chart.js).\n- **AI Advisor Panel**: Chat-interface dengan AI yang memberi rekomendasi bisnis harian berdasarkan data terkini.\n- **Laporan Otomatis**: Halaman report yang auto-generate PDF ringkasan mingguan.\n- **Tech Stack Frontend**: React.js, Chart.js, TailwindCSS.\n- **Tech Stack Backend**: Node.js, Python (LSTM), MongoDB, Docker, RabbitMQ."
+          title: "MVP & Pengembangan",
+          content: "MVP 30 Hari:\n\n- Minggu 1 → Template landing page + visitor counter\n- Minggu 2 → Email capture + dashboard dasar\n- Minggu 3 → Decision engine + perhitungan CI otomatis\n- Minggu 4 → UX improvement + pengujian pengguna\n\nPotensi Lanjutan:\n\n- **A/B testing otomatis** — bandingkan 2 versi headline sekaligus\n- **AI copy optimization** — AI rekomendasikan kata yang paling convert\n- **Bayesian updating** — model terus belajar dari setiap eksperimen"
         }
       ],
       resources: [
@@ -93,41 +83,36 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: "ThesisMiner",
-    subtitle: "AI Research Gap & Topic Discovery",
-    category: "AI / EdTech",
-    year: "2024",
-    filename: "ThesisMiner_AI_Research_Gap_Finder_TA.docx",
-    image: "assets/img/project-thesisminer.png",
-    tools: ["Python", "Transformers", "NLP", "Scrapy", "React"],
+    title: "Dana Sosial Masjid",
+    subtitle: "Transparansi Real-Time · QR Donasi · Laporan Otomatis",
+    category: "Platform / FinTech",
+    year: "2025",
+    image: "assets/img/project-danamasjid.jpg",
+    tools: ["React", "Laravel", "MySQL", "Midtrans", "OpenAI API"],
     accentColor: "#f59e0b",
-    desc: "Platform cerdas untuk menemukan gap penelitian dan inspirasi judul skripsi secara otomatis dari ribuan jurnal ilmiah.",
+    desc: "Platform web yang membantu masjid, musholla, dan komunitas kecil mengelola dana infak, zakat, dan donasi secara transparan dan digital — dengan QR donasi, laporan otomatis, dan dashboard publik real-time.",
     caseStudy: {
-      overview: "ThesisMiner dirancang sebagai alat bantu akademik transformatif yang memanfaatkan kecerdasan buatan untuk mempercepat proses **Penemuan Celah Penelitian** (*Research Gap Discovery*). Fokus utama penelitian ini adalah mengintegrasikan teknik pengambilan data otomatis dengan analisis semantik tingkat lanjut untuk memberikan navigasi strategis bagi peneliti muda dalam menentukan arah riset mereka.",
+      overview: "Website Manajemen Dana Sosial Masjid & Komunitas Mikro adalah platform web sederhana yang membantu masjid, musholla, dan komunitas kecil mengelola dana infak, zakat, dan donasi secara transparan dan digital. Tidak perlu lagi pencatatan manual — semua orang bisa lihat saldo dan penggunaan dana secara real-time. Dirancang sebagai solusi hyperlocal dari masjid RT/RW hingga yayasan sosial lokal.",
       sections: [
         {
-          title: "Platform & Bidang",
-          content: "**Platform:** Aplikasi Web berbasis browser (Web App) + sistem scraping otomatis di backend — dapat diakses langsung dari browser tanpa instalasi.\n\n**Bidang:** Teknologi Pendidikan (*EdTech*) & Riset Akademik. Ditujukan untuk mahasiswa tingkat akhir (S1/S2/S3), dosen pembimbing, dan peneliti yang kesulitan menemukan gap penelitian yang belum dieksplorasi.\n\n**Berbasis:** Kecerdasan Buatan (AI) dengan pendekatan **NLP & Topic Modeling** — sistem secara otomatis memetakan lanskap riset dari ribuan jurnal dan mengidentifikasi 'ruang kosong' yang berpotensi menjadi topik baru.\n\n**Metode:**\n\n- **BERTopic + Sentence-BERT (Transformers)** — representasi semantik abstrak jurnal ke dalam ruang vektor berdimensi tinggi.\n- **HDBSCAN Clustering** — pengelompokan topik secara dinamis dan otomatis tanpa pelabelan manual (*Unsupervised Learning*).\n- **Scrapy Web Scraping** — ekstraksi data metadata dan abstrak secara legal dari SINTA, IEEE, dan repositori akademik lainnya.\n- **Knowledge Graph Visualization** — pemetaan visual 2D distribusi riset untuk mengidentifikasi area kosong secara intuitif."
+          title: "Masalah yang Diselesaikan",
+          content: "Masalah utama komunitas:\n\n- **Pencatatan manual** — Rentan kesalahan, sulit diaudit\n- **Transparansi rendah** — Jamaah ragu berdonasi karena tidak tahu uang digunakan untuk apa\n- **Laporan tidak real-time** — Informasi keuangan baru diketahui saat rapat bulanan\n- **Trust issue** — Ketidakpercayaan → donasi menurun → program sosial terhambat"
         },
         {
-          title: "1. Latar Belakang & Urgensi Penelitian",
-          content: "Salah satu hambatan utama mahasiswa dalam tahap awal Tugas Akhir (TA) adalah sulitnya menemukan kebaruan (*novelty*) penelitian di tengah jutaan publikasi ilmiah yang sudah ada. Proses peninjauan literatur secara manual membutuhkan waktu berbulan-bulan dan sangat rentan terhadap residu informasi yang tidak relevan.\n\nPenelitian ini mengusulkan solusi: Sistem otomasi pencarian gap riset yang mampu memproses ribuan abstrak jurnal dalam hitungan menit untuk mengidentifikasi topik yang belum dieksplorasi namun memiliki potensi signifikansi tinggi."
+          title: "Fitur Utama Platform",
+          content: "1. Dashboard Transparansi Publik:\n\n- Saldo terkini yang bisa dilihat siapa saja (tanpa login)\n- Breakdown per program (renovasi, santunan, kegiatan, dll)\n- Grafik tren donasi bulanan\n\n2. QR Donasi + Auto Ledger:\n\n- Setiap program punya QR Code sendiri\n- Donasi masuk langsung tercatat otomatis tanpa input manual\n\n3. AI Summary Laporan Bulanan:\n\n- Laporan keuangan digenerate otomatis dalam bahasa Indonesia natural"
         },
         {
-          title: "2. Metodologi 'Gap Discovery' Berbasis AI",
-          content: "Alur kerja utama sistem mengandalkan sinergi antara beberapa teknologi NLP:\n\n- **Automated Data Acquisition**: Menggunakan *Scrapy context-aware spiders* untuk melakukan ekstraksi metadata dan abstrak secara legal dari repositori bereputasi (SINTA, IEEE, dll).\n- **Topic Mapping**: Implementasi algoritma **BERTopic** dan **NLP Transformers (Sentence-BERT)** untuk membedah ribuan abstrak menjadi klaster topik pada ruang latensi tinggi.\n- **Clustering Analysis**: Penerapan algoritma HDBSCAN untuk mengidentifikasi topik baru secara dinamis tanpa memerlukan pelabelan data manual (*Unsupervised Learning*)."
+          title: "Stack Teknologi",
+          content: "Stack yang dipilih (Sederhana, Terbukti):\n\n- **Frontend** → React / Next.js atau Vue.js\n- **Backend** → Laravel / Node.js\n- **Database** → MySQL / PostgreSQL\n- **Payment** → Midtrans / Xendit (untuk QR & transfer)\n- **AI** → OpenAI API (untuk natural language summary)"
         },
         {
-          title: "3. Pengembangan Aplikasi & Visualisasi",
-          content: "Sebagai sebuah aplikasi web, ThesisMiner menawarkan pengalaman pengguna yang intuitif:\n\n- **Knowledge Graph Visualization**: Pengguna dapat melihat persebaran riset melalui peta visual 2D. Area yang kosong secara visual menandakan potensi celah penelitian (*Research Gap*).\n- **Judul Recommendation Engine**: AI memberikan saran judul skripsi dengan menghubungkan kata kunci dari klaster topik yang memiliki kepadatan rendah namun relevansi tinggi terhadap tren riset global.\n- **Interactive Dashboard**: Dibangun menggunakan *React.js* dan visualisasi data dinamis untuk mempermudah pemetaan arah studi literatur."
+          title: "Model Bisnis & Peluang",
+          content: "Paket Layanan:\n\n- **Starter** → Rp 50.000/bulan — Masjid kecil, 1 program aktif\n- **Standard** → Rp 100.000/bulan — Masjid dengan beberapa program\n- **Pro** → Rp 150.000/bulan — Fitur AI + multi-admin + laporan advanced\n- **White-label** → Negosiasi — Yayasan / ormas yang ingin branding sendiri\n\nTotal Addressable Market:\n\n- 🕌 Indonesia: > 800.000 masjid aktif\n- 💡 Penetrasi 1% = 8.000 pelanggan = **Rp 400 juta–1,2 miliar/bulan ARR**"
         },
         {
-          title: "4. Hasil Uji Coba & Validasi Akademik",
-          content: "Melalui serangkaian pengujian terhadap dataset ribuan abstrak jurnal dan feedback dari mahasiswa akhir, diperoleh hasil:\n\n- **Efisiensi Waktu Literatur**: Mempercepat fase awal pencarian literatur review hingga **75%**.\n- **Akurasi Klasifikasi**: Model mencapai akurasi **88%** dalam menentukan klasifikasi topik secara otomatis.\n- **Akselerasi Judul**: Memungkinkan mahasiswa menemukan judul penelitian yang solid dan memiliki *novelty* dalam waktu kurang dari satu jam."
-        },
-        {
-          title: "5. Rancangan Website ThesisMiner",
-          content: "Website ThesisMiner dirancang sebagai **platform EdTech Web App** berbasis AI yang ramah mahasiswa:\n\n- **Landing Page**: Hero dengan ilustrasi peta topik dinamis, klaim utama 'Temukan Celah Riset dalam 60 Detik', dan tombol 'Coba Gratis'.\n- **Topic Explorer**: Input pencarian jurnal → sistem menampilkan bubble chart interaktif dari klaster topik yang dipetakan oleh BERTopic.\n- **Gap Detector**: Panel hasil yang menampilkan area kosong (research gap) dengan confidence score dan rekomendasi judul TA.\n- **History & Saved**: Pengguna bisa simpan sesi pencarian dan ekspor hasil ke PDF/Word.\n- **Tech Stack Frontend**: React.js, D3.js (visualisasi bubble chart & knowledge graph).\n- **Tech Stack Backend**: Python, BERTopic, Sentence-BERT, Scrapy, FastAPI."
+          title: "Roadmap Pengembangan",
+          content: "MVP (Bulan 1–2):\n\n- Registrasi masjid/komunitas\n- Dashboard saldo real-time\n- QR Code donasi dasar\n\nFase 2–3 (Bulan 3–6):\n\n- Integrasi payment gateway\n- AI summary laporan bulanan\n- Notifikasi WhatsApp otomatis\n- Multi-admin & role management\n\nFase 4 (Bulan 7+):\n\n- White-label solution & Mobile app (PWA)"
         }
       ],
       resources: [
@@ -136,6 +121,7 @@ const PROJECTS = [
     }
   }
 ];
+
 
 const MARQUEE_ITEMS = ["Web Developer", "AI Engineer", "Full Stack", "UI / UX Designer", "Problem Solver"];
 const TECH_LOGOS = ["React", "Python", "Node.js", "Docker", "TensorFlow", "MongoDB", "MySQL", "Figma", "Git", "Next.js", "FastAPI", "PostgreSQL"];
@@ -153,6 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   initMarquees();
   initContactForm();
+  initSkillCountUp();
 
   // Animation sequences
   initGSAPAnimations();
@@ -223,6 +210,44 @@ function initMarquees() {
     marqueeContent.innerHTML = content + content + content + content;
   }
 
+  // Skills icon marquee — clickable icons → official sites
+  const SKILL_ICONS = [
+    { name: "Figma", icon: "figma", url: "https://figma.com" },
+    { name: "HTML5", icon: "html5", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS3", icon: "css3", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "JavaScript", icon: "javascript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: "TypeScript", icon: "typescript", url: "https://www.typescriptlang.org" },
+    { name: "React", icon: "react", url: "https://react.dev" },
+    { name: "Next.js", icon: "nextjs", url: "https://nextjs.org" },
+    { name: "Tailwind", icon: "tailwindcss", url: "https://tailwindcss.com" },
+    { name: "NestJS", icon: "nestjs", url: "https://nestjs.com" },
+    { name: "Django", icon: "django", url: "https://www.djangoproject.com" },
+    { name: "Laravel", icon: "laravel", url: "https://laravel.com" },
+    { name: "Node.js", icon: "nodejs", url: "https://nodejs.org" },
+    { name: "MySQL", icon: "mysql", url: "https://www.mysql.com" },
+    { name: "PostgreSQL", icon: "postgresql", url: "https://www.postgresql.org" },
+    { name: "MongoDB", icon: "mongodb", url: "https://www.mongodb.com" },
+    { name: "GitHub", icon: "github", url: "https://github.com" },
+    { name: "GitLab", icon: "gitlab", url: "https://gitlab.com" },
+    { name: "Postman", icon: "postman", url: "https://www.postman.com" },
+    { name: "Vite", icon: "vitejs", url: "https://vitejs.dev" },
+    { name: "Docker", icon: "docker", url: "https://www.docker.com" },
+    { name: "Unity", icon: "unity", url: "https://unity.com" },
+    { name: "Python", icon: "python", url: "https://www.python.org" },
+  ];
+
+  const skillsMarquee = document.getElementById("skillsMarqueeContent");
+  if (skillsMarquee) {
+    const buildItems = () => SKILL_ICONS.map(s => `
+      <a class="sm-item" href="${s.url}" target="_blank" rel="noopener" title="${s.name}">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${s.icon}/${s.icon}-original.svg"
+             onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${s.icon}/${s.icon}-plain.svg'"
+             alt="${s.name}" width="32" height="32" loading="lazy">
+        <span>${s.name}</span>
+      </a>`).join("");
+    skillsMarquee.innerHTML = buildItems() + buildItems();
+  }
+
   const techMarqueeContent = document.getElementById("techMarqueeContent");
   if (techMarqueeContent) {
     const techContent = TECH_LOGOS.map(logo => `<span>${logo}</span>`).join("");
@@ -241,7 +266,7 @@ function initGSAPAnimations() {
     .from(".navbar", { y: -50, opacity: 0, duration: 1, ease: "power2.out" }, "-=1");
 
   // 2. Parallax Hero
-  gsap.to(".hero-bg", {
+  gsap.to(".hero-video", {
     yPercent: 30,
     ease: "none",
     scrollTrigger: {
@@ -281,7 +306,7 @@ function initGSAPAnimations() {
     onLeave: () => hideSkills()
   });
 
-  // 4. About Reveal (ifalf.com Style — color-based word reveal)
+  // 4. About Reveal — scroll-scrubbed word reveal (nyala seiring scroll)
   const aboutHeading = document.getElementById("aboutRevealTitle");
   if (aboutHeading) {
     const rawText = aboutHeading.innerText.trim();
@@ -291,35 +316,23 @@ function initGSAPAnimations() {
       .join(" ");
 
     const wordSpans = aboutHeading.querySelectorAll(".about-word");
+    const total = wordSpans.length;
 
-    // Repeatable: plays each time section enters, resets when section leaves
-    ScrollTrigger.create({
-      trigger: ".about",
-      start: "top 65%",
-      onEnter: () => {
-        gsap.to(wordSpans, {
+    // Each word animates at its own scroll progress point
+    wordSpans.forEach((span, i) => {
+      gsap.fromTo(span,
+        { color: "rgba(255,255,255,0.12)" },
+        {
           color: "rgba(255,255,255,1)",
-          duration: 0.5,
-          stagger: { each: 0.07, from: "start" },
-          ease: "power1.out",
-          overwrite: true
-        });
-      },
-      onLeave: () => {
-        gsap.set(wordSpans, { color: "rgba(255,255,255,0.12)" });
-      },
-      onEnterBack: () => {
-        gsap.to(wordSpans, {
-          color: "rgba(255,255,255,1)",
-          duration: 0.5,
-          stagger: { each: 0.07, from: "end" },
-          ease: "power1.out",
-          overwrite: true
-        });
-      },
-      onLeaveBack: () => {
-        gsap.set(wordSpans, { color: "rgba(255,255,255,0.12)" });
-      }
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".about",
+            start: `top+=${(i / total) * 60}% 70%`,
+            end: `top+=${((i + 1) / total) * 60}% 60%`,
+            scrub: 0.5,
+          }
+        }
+      );
     });
   }
 
@@ -577,3 +590,50 @@ function initContactForm() {
     }, 1200);
   });
 }
+
+/* ---- Skill Percentage Count-Up Animation ---- */
+function initSkillCountUp() {
+  const pctEls = document.querySelectorAll(".skill-pct");
+  if (!pctEls.length) return;
+
+  // Store original values and reset to 0
+  pctEls.forEach(el => {
+    const target = parseInt(el.textContent, 10);
+    el.dataset.target = target;
+    el.textContent = "0%";
+  });
+
+  const easeOut = (t) => 1 - Math.pow(1 - t, 3); // cubic ease-out
+
+  const animateCount = (el) => {
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 1200; // ms
+    const start = performance.now();
+
+    const step = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const value = Math.round(easeOut(progress) * target);
+      el.textContent = value + "%";
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Animate all .skill-pct when the skills section enters view
+        pctEls.forEach((el, i) => {
+          setTimeout(() => animateCount(el), i * 60); // stagger 60ms per card
+        });
+        observer.disconnect(); // run once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const skillsSection = document.querySelector(".skills");
+  if (skillsSection) observer.observe(skillsSection);
+}
+

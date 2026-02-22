@@ -6,4 +6,4 @@ Portfolio pribadi UZI, seorang Web Developer & AI Engineer. Dibangun menggunakan
 
 ---
 
-Menampilkan skills, pengalaman kerja, dan 3 project penelitian AI: **NeuroWeave**, **BizPilot**, dan **ThesisMiner**.
+Menampilkan skills, pengalaman kerja, dan 3 project utama: **Micromodeling Artisan**, **Validasi Ide Bisnis**, dan **Dana Sosial Masjid**.
